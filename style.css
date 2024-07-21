@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
     padding: 0 20px;
 }
@@ -194,7 +194,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .nav-list {
         display: none;
         flex-direction: column;
@@ -212,7 +212,7 @@ footer {
     
     .menu-btn {
         display: block;
-       margin-left: -400px;
+       margin-left: -200px;
         
     }
     
