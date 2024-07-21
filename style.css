@@ -1,0 +1,235 @@
+/* Base Styles */
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    position: relative;
+    color: #fff;
+    background-image: url('./image/about_page.jpg');
+    min-height: 70vh;
+    width: 100%;
+    background-position:  top center;
+    background-size: cover;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 550px;
+    /* align-items: center; */
+   
+
+}
+
+.logo {
+    height: 100px;
+    background-color: beige;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-list a {
+    color:  orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: rgb(255, 255, 249);
+}
+
+.menu-btn {
+    display: none;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    color:orange;
+    cursor: pointer;
+}
+.menu-btn:hover{
+    background-color: white;
+}
+#hero {
+    /* background: url('./image/about_page.jpg') center center/cover no-repeat;
+    min-height: 60vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.btn-main {
+    background: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-main:hover {
+    background: #fff;
+    color: orange;
+}
+
+#services, #trainers, #testimonials {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services, .trainers, .testimonials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.service, .trainer, .testimonial:hover
+{
+   cursor: pointer;
+   transform: translatey(10px);
+}
+.service, .trainer, .testimonial {
+    flex: 1;
+    max-width: 300px;
+    background-color: rgb(244, 191, 122);
+    overflow: hidden;
+    animation: cardFadeIn 5s ease-out;
+}
+
+@keyframes  cardFadeIn {
+    from
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to
+    {
+      
+        opacity: 1;
+        transform: translateY(0);  
+    }
+}
+
+.service img, .trainer img, .testimonial img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background: orange;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: black;
+}
+#res
+{
+    background: white;
+    border-radius: 5px;
+}
+#res:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right:0;
+        width: 100%;
+        background:black;
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
+    
+    .menu-btn {
+        display: block;
+       margin-left: -400px;
+        
+    }
+    
+    #hero {
+        padding: 20px;
+    }
+
+    .services, .trainers, .testimonials {
+        flex-direction: column;
+    }
+
+    .service, .trainer, .testimonial {
+        max-width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items:center;
+}
+}
